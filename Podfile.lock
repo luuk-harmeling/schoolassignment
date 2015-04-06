@@ -1,0 +1,10 @@
+PODS:
+  - ZSSRichTextEditor (0.5.2.1)
+
+DEPENDENCIES:
+  - ZSSRichTextEditor (~> 0.5)
+
+SPEC CHECKSUMS:
+  ZSSRichTextEditor: 56ed060d6d7a98fb6be9fceb8074ced22160349b
+
+COCOAPODS: 0.36.3

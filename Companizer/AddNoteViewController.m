@@ -8,20 +8,51 @@
 
 #import "AddNoteViewController.h"
 
+
 @interface AddNoteViewController ()
+
+@property NSString *fieldContents;
+
+
 
 @end
 
 @implementation AddNoteViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+    [self becomeFirstResponder];
+    
+    
+    // Set the base URL if you would like to use relative links, such as to images.
+    self.baseURL = [NSURL URLWithString:@"http://www.zedsaid.com"];
+    
+    // If you want to pretty print HTML within the source view.
+    self.formatHTML = YES;
+    
+    
+    
+    //methode toeveogen dat hij binnne de bounds blijft
+    
+
+    
+    
+    NSLog(@"The contetnts : %@", self.fieldContents);
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)saveButtonPressed:(id)sender
+{
+    self.fieldContents = [self getHTML];
+    NSLog(@"contents: %@", self.fieldContents);
 }
 
 /*

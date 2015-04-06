@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ECE78143F2C9FDB1C1F8B5F /* libPods-Companizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E64785DA25BAC2947D3F84 /* libPods-Companizer.a */; };
 		DC0DEA1D1AC96F560050EC9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0DEA1C1AC96F560050EC9D /* main.m */; };
 		DC0DEA201AC96F560050EC9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0DEA1F1AC96F560050EC9D /* AppDelegate.m */; };
 		DC0DEA231AC96F560050EC9D /* Companizer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC0DEA211AC96F560050EC9D /* Companizer.xcdatamodeld */; };
@@ -16,6 +17,17 @@
 		DC0DEA2E1AC96F560050EC9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0DEA2D1AC96F560050EC9D /* Images.xcassets */; };
 		DC0DEA311AC96F560050EC9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0DEA2F1AC96F560050EC9D /* LaunchScreen.xib */; };
 		DC0DEA3D1AC96F560050EC9D /* CompanizerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0DEA3C1AC96F560050EC9D /* CompanizerTests.m */; };
+		DC0DEA551AC99A720050EC9D /* AddCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0DEA541AC99A720050EC9D /* AddCompanyViewController.m */; };
+		DC0DEA571ACAC6FB0050EC9D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0DEA561ACAC6FB0050EC9D /* AddressBook.framework */; };
+		DC0DEA591ACAC6FF0050EC9D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0DEA581ACAC6FF0050EC9D /* AddressBookUI.framework */; };
+		DC2329141ACC2A8B00527EA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2329131ACC2A8B00527EA8 /* CoreGraphics.framework */; };
+		DC2329161ACC2A9200527EA8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2329151ACC2A9200527EA8 /* CoreText.framework */; };
+		DC4BE7F31ACC0C5800CB1698 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4BE7F21ACC0C5800CB1698 /* ContactDetailViewController.m */; };
+		DC7D129D1AD14A550001779B /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7D129C1AD14A550001779B /* Company.m */; };
+		DC7D12A01AD14A550001779B /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7D129F1AD14A550001779B /* Note.m */; };
+		DC7D12A31AD14A550001779B /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7D12A21AD14A550001779B /* Contact.m */; };
+		DC91FD491ACC3E1700FD94AA /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */; };
+		DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1916B3FC9B2F7563F8EB064 /* Pods-Companizer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Companizer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Companizer/Pods-Companizer.debug.xcconfig"; sourceTree = "<group>"; };
 		DC0DEA171AC96F560050EC9D /* Companizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Companizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0DEA1B1AC96F560050EC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC0DEA1C1AC96F560050EC9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +58,26 @@
 		DC0DEA361AC96F560050EC9D /* CompanizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompanizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0DEA3B1AC96F560050EC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC0DEA3C1AC96F560050EC9D /* CompanizerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompanizerTests.m; sourceTree = "<group>"; };
+		DC0DEA531AC99A720050EC9D /* AddCompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCompanyViewController.h; sourceTree = "<group>"; };
+		DC0DEA541AC99A720050EC9D /* AddCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCompanyViewController.m; sourceTree = "<group>"; };
+		DC0DEA561ACAC6FB0050EC9D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		DC0DEA581ACAC6FF0050EC9D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		DC2329131ACC2A8B00527EA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DC2329151ACC2A9200527EA8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DC4BE7F11ACC0C5800CB1698 /* ContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
+		DC4BE7F21ACC0C5800CB1698 /* ContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
+		DC7D129B1AD14A550001779B /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		DC7D129C1AD14A550001779B /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		DC7D129E1AD14A550001779B /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		DC7D129F1AD14A550001779B /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		DC7D12A11AD14A550001779B /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		DC7D12A21AD14A550001779B /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		DC91FD471ACC3E1700FD94AA /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
+		DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
+		DC91FD4A1ACC3FEA00FD94AA /* QuickAddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickAddNoteViewController.h; sourceTree = "<group>"; };
+		DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickAddNoteViewController.m; sourceTree = "<group>"; };
+		E8B36672D2E3D29BBCBAC64B /* Pods-Companizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Companizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Companizer/Pods-Companizer.release.xcconfig"; sourceTree = "<group>"; };
+		F8E64785DA25BAC2947D3F84 /* libPods-Companizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Companizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +85,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC2329161ACC2A9200527EA8 /* CoreText.framework in Frameworks */,
+				DC2329141ACC2A8B00527EA8 /* CoreGraphics.framework in Frameworks */,
+				DC0DEA591ACAC6FF0050EC9D /* AddressBookUI.framework in Frameworks */,
+				DC0DEA571ACAC6FB0050EC9D /* AddressBook.framework in Frameworks */,
+				1ECE78143F2C9FDB1C1F8B5F /* libPods-Companizer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +103,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11E7DA41189F832B47398325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8E64785DA25BAC2947D3F84 /* libPods-Companizer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53D5C69D71E54B7B90A73094 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1916B3FC9B2F7563F8EB064 /* Pods-Companizer.debug.xcconfig */,
+				E8B36672D2E3D29BBCBAC64B /* Pods-Companizer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DC0DEA0E1AC96F560050EC9D = {
 			isa = PBXGroup;
 			children = (
+				DC2329151ACC2A9200527EA8 /* CoreText.framework */,
+				DC2329131ACC2A8B00527EA8 /* CoreGraphics.framework */,
+				DC0DEA581ACAC6FF0050EC9D /* AddressBookUI.framework */,
+				DC0DEA561ACAC6FB0050EC9D /* AddressBook.framework */,
+				DC0DEA461AC973030050EC9D /* entities */,
 				DC0DEA191AC96F560050EC9D /* Companizer */,
 				DC0DEA391AC96F560050EC9D /* CompanizerTests */,
 				DC0DEA181AC96F560050EC9D /* Products */,
+				53D5C69D71E54B7B90A73094 /* Pods */,
+				11E7DA41189F832B47398325 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,15 +148,11 @@
 		DC0DEA191AC96F560050EC9D /* Companizer */ = {
 			isa = PBXGroup;
 			children = (
-				DC0DEA1E1AC96F560050EC9D /* AppDelegate.h */,
-				DC0DEA1F1AC96F560050EC9D /* AppDelegate.m */,
-				DC0DEA241AC96F560050EC9D /* MasterViewController.h */,
-				DC0DEA251AC96F560050EC9D /* MasterViewController.m */,
-				DC0DEA271AC96F560050EC9D /* DetailViewController.h */,
-				DC0DEA281AC96F560050EC9D /* DetailViewController.m */,
-				DC0DEA2A1AC96F560050EC9D /* Main.storyboard */,
+				DC4BE7F51ACC0C7300CB1698 /* Delegates */,
+				DC4BE7F41ACC0C6200CB1698 /* Controllers */,
 				DC0DEA2D1AC96F560050EC9D /* Images.xcassets */,
 				DC0DEA2F1AC96F560050EC9D /* LaunchScreen.xib */,
+				DC0DEA2A1AC96F560050EC9D /* Main.storyboard */,
 				DC0DEA211AC96F560050EC9D /* Companizer.xcdatamodeld */,
 				DC0DEA1A1AC96F560050EC9D /* Supporting Files */,
 			);
@@ -127,6 +185,80 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DC0DEA461AC973030050EC9D /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				DC7D12A11AD14A550001779B /* Contact.h */,
+				DC7D12A21AD14A550001779B /* Contact.m */,
+				DC7D129E1AD14A550001779B /* Note.h */,
+				DC7D129F1AD14A550001779B /* Note.m */,
+				DC7D129B1AD14A550001779B /* Company.h */,
+				DC7D129C1AD14A550001779B /* Company.m */,
+			);
+			name = entities;
+			path = Companizer/entities;
+			sourceTree = "<group>";
+		};
+		DC4BE7F41ACC0C6200CB1698 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC91FD461ACC3E0500FD94AA /* Notes */,
+				DC4BE7FB1ACC0CCF00CB1698 /* Company */,
+				DC4BE7FA1ACC0CBD00CB1698 /* Masterview */,
+				DC4BE7FC1ACC0CEE00CB1698 /* Contact */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DC4BE7F51ACC0C7300CB1698 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				DC0DEA1E1AC96F560050EC9D /* AppDelegate.h */,
+				DC0DEA1F1AC96F560050EC9D /* AppDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		DC4BE7FA1ACC0CBD00CB1698 /* Masterview */ = {
+			isa = PBXGroup;
+			children = (
+				DC0DEA241AC96F560050EC9D /* MasterViewController.h */,
+				DC0DEA251AC96F560050EC9D /* MasterViewController.m */,
+			);
+			name = Masterview;
+			sourceTree = "<group>";
+		};
+		DC4BE7FB1ACC0CCF00CB1698 /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				DC0DEA271AC96F560050EC9D /* DetailViewController.h */,
+				DC0DEA281AC96F560050EC9D /* DetailViewController.m */,
+				DC0DEA531AC99A720050EC9D /* AddCompanyViewController.h */,
+				DC0DEA541AC99A720050EC9D /* AddCompanyViewController.m */,
+			);
+			name = Company;
+			sourceTree = "<group>";
+		};
+		DC4BE7FC1ACC0CEE00CB1698 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				DC4BE7F11ACC0C5800CB1698 /* ContactDetailViewController.h */,
+				DC4BE7F21ACC0C5800CB1698 /* ContactDetailViewController.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		DC91FD461ACC3E0500FD94AA /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				DC91FD471ACC3E1700FD94AA /* AddNoteViewController.h */,
+				DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */,
+				DC91FD4A1ACC3FEA00FD94AA /* QuickAddNoteViewController.h */,
+				DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */,
+			);
+			name = Notes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC0DEA401AC96F560050EC9D /* Build configuration list for PBXNativeTarget "Companizer" */;
 			buildPhases = (
+				EC6B0175171827400D01C962 /* Check Pods Manifest.lock */,
 				DC0DEA131AC96F560050EC9D /* Sources */,
 				DC0DEA141AC96F560050EC9D /* Frameworks */,
 				DC0DEA151AC96F560050EC9D /* Resources */,
+				93CF37BBD8FF0A8C82068794 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,16 +356,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		93CF37BBD8FF0A8C82068794 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Companizer/Pods-Companizer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC6B0175171827400D01C962 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC0DEA131AC96F560050EC9D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0DEA551AC99A720050EC9D /* AddCompanyViewController.m in Sources */,
+				DC7D129D1AD14A550001779B /* Company.m in Sources */,
+				DC91FD491ACC3E1700FD94AA /* AddNoteViewController.m in Sources */,
 				DC0DEA291AC96F560050EC9D /* DetailViewController.m in Sources */,
+				DC7D12A31AD14A550001779B /* Contact.m in Sources */,
 				DC0DEA261AC96F560050EC9D /* MasterViewController.m in Sources */,
+				DC4BE7F31ACC0C5800CB1698 /* ContactDetailViewController.m in Sources */,
+				DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */,
 				DC0DEA201AC96F560050EC9D /* AppDelegate.m in Sources */,
 				DC0DEA1D1AC96F560050EC9D /* main.m in Sources */,
 				DC0DEA231AC96F560050EC9D /* Companizer.xcdatamodeld in Sources */,
+				DC7D12A01AD14A550001779B /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +525,7 @@
 		};
 		DC0DEA411AC96F560050EC9D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1916B3FC9B2F7563F8EB064 /* Pods-Companizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Companizer/Info.plist;
@@ -361,6 +536,7 @@
 		};
 		DC0DEA421AC96F560050EC9D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B36672D2E3D29BBCBAC64B /* Pods-Companizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Companizer/Info.plist;
@@ -422,6 +598,7 @@
 				DC0DEA421AC96F560050EC9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC0DEA431AC96F560050EC9D /* Build configuration list for PBXNativeTarget "CompanizerTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +607,7 @@
 				DC0DEA451AC96F560050EC9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

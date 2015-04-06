@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZSSRichTextEditor.h"
 
-@interface AddNoteViewController : UIViewController
+@interface AddNoteViewController : ZSSRichTextEditor
 
 @end

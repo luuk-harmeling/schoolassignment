@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface AddCompanyViewController : UIViewController
+@interface AddCompanyViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+
 
 @end

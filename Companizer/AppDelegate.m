@@ -49,6 +49,11 @@
     [self saveContext];
 }
 
+- (NSManagedObjectContext *)getManagedContext
+{
+    return self.managedObjectContext;
+}
+
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -97,7 +102,6 @@
     
     return _persistentStoreCoordinator;
 }
-
 
 - (NSManagedObjectContext *)managedObjectContext {
     // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)

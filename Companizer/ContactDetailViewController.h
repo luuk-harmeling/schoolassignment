@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contact.h"
 
 @interface ContactDetailViewController : UIViewController
+
+
+@property (strong, nonatomic) Contact *selectedContact;
+
+
+- (void)setContactForDetailPage:(Contact *)newDetailItem;
 
 @end
