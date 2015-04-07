@@ -50,6 +50,7 @@
         self.nameField.text = [[self.detailItem valueForKey:@"name"] description];
         self.adressField.text  = [[self.detailItem valueForKey:@"adress"] description];
         self.phoneNumberField.text = [[self.detailItem valueForKey:@"phoneNumber"] description];
+    
         self.phoneNumberField.editable = NO;
         self.phoneNumberField.dataDetectorTypes = UIDataDetectorTypeAll;
     }
@@ -181,6 +182,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"name"] description];
+    cell.detailTextLabel.text = [[object valueForKey:@"phoneNumber"] description];   
 }
 
 #pragma mark - Fetched results controller

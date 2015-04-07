@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Contact.h"
 
-@interface ContactDetailViewController : UIViewController
+@interface ContactDetailViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
 
 @property (strong, nonatomic) Contact *selectedContact;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 
 - (void)setContactForDetailPage:(Contact *)newDetailItem;

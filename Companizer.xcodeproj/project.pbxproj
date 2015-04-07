@@ -23,9 +23,10 @@
 		DC2329141ACC2A8B00527EA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2329131ACC2A8B00527EA8 /* CoreGraphics.framework */; };
 		DC2329161ACC2A9200527EA8 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2329151ACC2A9200527EA8 /* CoreText.framework */; };
 		DC4BE7F31ACC0C5800CB1698 /* ContactDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4BE7F21ACC0C5800CB1698 /* ContactDetailViewController.m */; };
-		DC7D129D1AD14A550001779B /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7D129C1AD14A550001779B /* Company.m */; };
-		DC7D12A01AD14A550001779B /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7D129F1AD14A550001779B /* Note.m */; };
-		DC7D12A31AD14A550001779B /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DC7D12A21AD14A550001779B /* Contact.m */; };
+		DC65751A1AD43BE0007199D5 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6575151AD43BE0007199D5 /* Contact.m */; };
+		DC65751B1AD43BE0007199D5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6575171AD43BE0007199D5 /* Note.m */; };
+		DC65751C1AD43BE0007199D5 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6575191AD43BE0007199D5 /* Company.m */; };
+		DC7D12A51AD42EB40001779B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7D12A41AD42EB40001779B /* QuartzCore.framework */; };
 		DC91FD491ACC3E1700FD94AA /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */; };
 		DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */; };
 /* End PBXBuildFile section */
@@ -66,12 +67,13 @@
 		DC2329151ACC2A9200527EA8 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		DC4BE7F11ACC0C5800CB1698 /* ContactDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailViewController.h; sourceTree = "<group>"; };
 		DC4BE7F21ACC0C5800CB1698 /* ContactDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailViewController.m; sourceTree = "<group>"; };
-		DC7D129B1AD14A550001779B /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
-		DC7D129C1AD14A550001779B /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
-		DC7D129E1AD14A550001779B /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
-		DC7D129F1AD14A550001779B /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
-		DC7D12A11AD14A550001779B /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
-		DC7D12A21AD14A550001779B /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		DC6575141AD43BE0007199D5 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		DC6575151AD43BE0007199D5 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		DC6575161AD43BE0007199D5 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
+		DC6575171AD43BE0007199D5 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		DC6575181AD43BE0007199D5 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		DC6575191AD43BE0007199D5 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		DC7D12A41AD42EB40001779B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DC91FD471ACC3E1700FD94AA /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
 		DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
 		DC91FD4A1ACC3FEA00FD94AA /* QuickAddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickAddNoteViewController.h; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7D12A51AD42EB40001779B /* QuartzCore.framework in Frameworks */,
 				DC2329161ACC2A9200527EA8 /* CoreText.framework in Frameworks */,
 				DC2329141ACC2A8B00527EA8 /* CoreGraphics.framework in Frameworks */,
 				DC0DEA591ACAC6FF0050EC9D /* AddressBookUI.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		11E7DA41189F832B47398325 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC7D12A41AD42EB40001779B /* QuartzCore.framework */,
 				F8E64785DA25BAC2947D3F84 /* libPods-Companizer.a */,
 			);
 			name = Frameworks;
@@ -188,12 +192,12 @@
 		DC0DEA461AC973030050EC9D /* entities */ = {
 			isa = PBXGroup;
 			children = (
-				DC7D12A11AD14A550001779B /* Contact.h */,
-				DC7D12A21AD14A550001779B /* Contact.m */,
-				DC7D129E1AD14A550001779B /* Note.h */,
-				DC7D129F1AD14A550001779B /* Note.m */,
-				DC7D129B1AD14A550001779B /* Company.h */,
-				DC7D129C1AD14A550001779B /* Company.m */,
+				DC6575141AD43BE0007199D5 /* Contact.h */,
+				DC6575151AD43BE0007199D5 /* Contact.m */,
+				DC6575161AD43BE0007199D5 /* Note.h */,
+				DC6575171AD43BE0007199D5 /* Note.m */,
+				DC6575181AD43BE0007199D5 /* Company.h */,
+				DC6575191AD43BE0007199D5 /* Company.m */,
 			);
 			name = entities;
 			path = Companizer/entities;
@@ -395,17 +399,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0DEA551AC99A720050EC9D /* AddCompanyViewController.m in Sources */,
-				DC7D129D1AD14A550001779B /* Company.m in Sources */,
 				DC91FD491ACC3E1700FD94AA /* AddNoteViewController.m in Sources */,
+				DC65751A1AD43BE0007199D5 /* Contact.m in Sources */,
 				DC0DEA291AC96F560050EC9D /* DetailViewController.m in Sources */,
-				DC7D12A31AD14A550001779B /* Contact.m in Sources */,
 				DC0DEA261AC96F560050EC9D /* MasterViewController.m in Sources */,
 				DC4BE7F31ACC0C5800CB1698 /* ContactDetailViewController.m in Sources */,
 				DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */,
+				DC65751C1AD43BE0007199D5 /* Company.m in Sources */,
 				DC0DEA201AC96F560050EC9D /* AppDelegate.m in Sources */,
 				DC0DEA1D1AC96F560050EC9D /* main.m in Sources */,
 				DC0DEA231AC96F560050EC9D /* Companizer.xcdatamodeld in Sources */,
-				DC7D12A01AD14A550001779B /* Note.m in Sources */,
+				DC65751B1AD43BE0007199D5 /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

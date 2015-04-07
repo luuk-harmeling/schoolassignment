@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface MasterViewController ()
 
@@ -53,8 +54,15 @@
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
     return [sectionInfo numberOfObjects];
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    CALayer *cellImageLayer = cell.imageView.layer;
+    [cellImageLayer setCornerRadius:9];
+    [cellImageLayer setMasksToBounds:YES];
+
+    
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }

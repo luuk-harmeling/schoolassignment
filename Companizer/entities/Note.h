@@ -1,9 +1,9 @@
 //
 //  Note.h
-//  Companizer
+//  Pods
 //
-//  Created by Luuk harmeling on 05/04/15.
-//  Copyright (c) 2015 Luuk harmeling & Hugo Olthof. All rights reserved.
+//  Created by Luuk harmeling on 07/04/15.
+//
 //
 
 #import <Foundation/Foundation.h>
@@ -14,8 +14,9 @@
 @interface Note : NSManagedObject
 
 @property (nonatomic, retain) NSString * content;
-@property (nonatomic, retain) NSString * note_type;
+@property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSData * image;
+@property (nonatomic, retain) NSString * note_type;
 @property (nonatomic, retain) Contact *contact;
 
 @end

@@ -7,11 +7,16 @@
 //
 
 #import "AddNoteViewController.h"
+#import "Note.h"
+#import "AppDelegate.h"
 
 
 @interface AddNoteViewController ()
 
-@property NSString *fieldContents;
+@property NSString                  *fieldContents;
+@property NSString                  *contactString;
+@property NSString                  *noteType;
+@property NSManagedObjectContext    *context;
 
 
 
@@ -23,46 +28,121 @@
 {
     [super viewDidLoad];
     
-    [self becomeFirstResponder];
+    // get the context from the AppDelegate
+    self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
     
+    self.navigationController.navigationBar.translucent = NO;
     
-    // Set the base URL if you would like to use relative links, such as to images.
-    self.baseURL = [NSURL URLWithString:@"http://www.zedsaid.com"];
+    self.contactString = [self createContactString];
     
-    // If you want to pretty print HTML within the source view.
+
+    [self setHTML:self.contactString];
     self.formatHTML = YES;
     
-    
-    
-    //methode toeveogen dat hij binnne de bounds blijft
-    
-
-    
-    
-    NSLog(@"The contetnts : %@", self.fieldContents);
-    // Do any additional setup after loading the view.
+    if(self.noteType == nil)
+    {
+        UIAlertView* message = [[UIAlertView alloc]
+                                initWithTitle: @"Choose a note type"
+                                message: @"for additional information"
+                                delegate: self
+                                cancelButtonTitle: @"cancel"
+                                otherButtonTitles: @"phonecall log",@"instant message log", @"email log", nil];
+        
+        [message becomeFirstResponder];
+        [message show];
+        
+    }
 }
 
-- (void)didReceiveMemoryWarning
+
+#pragma mark - Button Handling
+
+- (IBAction)saveButtonPressed:(id)sender
 {
+ 
+    self.fieldContents = [self getHTML];
+    NSLog(@"contents: %@", self.fieldContents);
+     NSLog(@"---------------------------------");
+    NSLog(@"Contact : %@", self.contactForNote.name);
+         NSLog(@"---------------------------------");
+    NSLog(@"Notetype: %@", self.noteType);
+         NSLog(@"---------------------------------");
+    
+    [self addNote];
+    
+}
+
+
+#pragma mark - Utilities
+
+
+- (void) addNote
+{
+    Note *note = [NSEntityDescription insertNewObjectForEntityForName:@"Note" inManagedObjectContext:self.context];
+    note.note_type = self.noteType;
+    note.content = self.fieldContents;
+    note.contact = self.contactForNote;
+    note.date = [NSDate date];
+    
+    
+        // Save the context.
+        NSError *error = nil;
+        if (![self.context save:&error])
+        {
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        else
+        {
+            UIAlertView *completionAlert = [[UIAlertView alloc] initWithTitle:@"Succes!" message:@"The note has been added!" delegate:self cancelButtonTitle:@"back" otherButtonTitles:nil, nil];
+            [completionAlert show];
+            
+            // This code will automatically redirect to the last controller if wished.
+            //[self.navigationController popToRootViewControllerAnimated:YES];
+        }
+    
+}
+
+- (NSString *)createContactString{
+    NSString *beforeContactHTML = @"<p><strong> Contact: ";
+    NSString *contactInfo = self.contactForNote.name;
+    NSString *afterContactHTML = @"</strong></p><br />";
+    
+    
+    NSString *finalizedString = [NSString stringWithFormat:@"%@ %@ %@", beforeContactHTML, contactInfo, afterContactHTML];
+    
+    return finalizedString;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+
+    NSString *string = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if ([string isEqualToString:@"phonecall log"])
+    {
+        self.noteType = @"phonecall log";
+        NSLog(@"phonecall log");
+        
+    }
+    else if ([string isEqualToString:@"instant message log"])
+    {
+        self.noteType = @"instant message log";
+        NSLog(@"instant message log");
+    }
+    else if ([string isEqualToString:@"email log"])
+    {
+        self.noteType = @"email log";
+        NSLog(@"email log");
+    }
+    
+}
+
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)saveButtonPressed:(id)sender
-{
-    self.fieldContents = [self getHTML];
-    NSLog(@"contents: %@", self.fieldContents);
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

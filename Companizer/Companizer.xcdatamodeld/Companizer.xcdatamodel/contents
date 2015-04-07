@@ -16,6 +16,7 @@
     </entity>
     <entity name="Note" representedClassName="Note" syncable="YES">
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="note_type" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="notes" inverseEntity="Contact" syncable="YES"/>
@@ -23,6 +24,6 @@
     <elements>
         <element name="Company" positionX="-2691" positionY="-6696" width="128" height="118"/>
         <element name="Contact" positionX="-2493" positionY="-6688" width="128" height="118"/>
-        <element name="Note" positionX="-2511" positionY="-6858" width="128" height="103"/>
+        <element name="Note" positionX="-2511" positionY="-6858" width="128" height="118"/>
     </elements>
 </model>

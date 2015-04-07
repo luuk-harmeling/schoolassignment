@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ZSSRichTextEditor.h"
+#import "Contact.h"
 
-@interface AddNoteViewController : ZSSRichTextEditor
+@interface AddNoteViewController : ZSSRichTextEditor <UIAlertViewDelegate>
+
+@property (strong, nonatomic) Contact  *contactForNote;
+
 
 @end

@@ -34,6 +34,8 @@
     // get the context from the AppDelegate
     self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
     
+
+    
     // initialize the textfields
     [self clearFields];
     
@@ -88,7 +90,6 @@
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
     self.logoRepresentation.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    
     self.companyLogo = UIImagePNGRepresentation(self.logoRepresentation.image);
 
     if (self.companyLogo != nil)
