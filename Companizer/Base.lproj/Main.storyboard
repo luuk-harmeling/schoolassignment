@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8a1-uB-ZFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1168.5" y="-750.75"/>
+            <point key="canvasLocation" x="-1147.5" y="-768"/>
         </scene>
         <!--Add company-->
         <scene sceneID="btS-Fs-NSB">
@@ -281,7 +281,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2K-AO-rv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-385" y="-1059"/>
+            <point key="canvasLocation" x="-319.5" y="-768"/>
+        </scene>
+        <!--Edit note-->
+        <scene sceneID="pbN-ii-zI3">
+            <objects>
+                <viewController title="Edit note" id="S9V-r7-R3V" customClass="EditNoteViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="den-Iv-scc"/>
+                        <viewControllerLayoutGuide type="bottom" id="wzN-Jz-tsE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6d1-ac-dPG">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="aZL-83-tWI"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Edit message" id="v6Z-p8-4YB">
+                        <barButtonItem key="rightBarButtonItem" title="Save changes" id="f2p-Vh-h9R">
+                            <connections>
+                                <action selector="saveChangesButtonTouched:" destination="S9V-r7-R3V" id="WY6-cX-Qdc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mw8-pS-niW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="-768"/>
         </scene>
         <!--Master-->
         <scene sceneID="VgW-fR-Quf">
@@ -651,6 +679,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="S9V-r7-R3V" kind="show" identifier="editMessageSegue" id="SPM-yF-H1R"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

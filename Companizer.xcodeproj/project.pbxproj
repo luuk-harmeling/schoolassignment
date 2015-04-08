@@ -26,6 +26,7 @@
 		DC65751A1AD43BE0007199D5 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6575151AD43BE0007199D5 /* Contact.m */; };
 		DC65751B1AD43BE0007199D5 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6575171AD43BE0007199D5 /* Note.m */; };
 		DC65751C1AD43BE0007199D5 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6575191AD43BE0007199D5 /* Company.m */; };
+		DC65751F1AD441CF007199D5 /* EditNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC65751E1AD441CF007199D5 /* EditNoteViewController.m */; };
 		DC7D12A51AD42EB40001779B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7D12A41AD42EB40001779B /* QuartzCore.framework */; };
 		DC91FD491ACC3E1700FD94AA /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */; };
 		DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */; };
@@ -73,6 +74,8 @@
 		DC6575171AD43BE0007199D5 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		DC6575181AD43BE0007199D5 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
 		DC6575191AD43BE0007199D5 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		DC65751D1AD441CF007199D5 /* EditNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNoteViewController.h; sourceTree = "<group>"; };
+		DC65751E1AD441CF007199D5 /* EditNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNoteViewController.m; sourceTree = "<group>"; };
 		DC7D12A41AD42EB40001779B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DC91FD471ACC3E1700FD94AA /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
 		DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */,
 				DC91FD4A1ACC3FEA00FD94AA /* QuickAddNoteViewController.h */,
 				DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */,
+				DC65751D1AD441CF007199D5 /* EditNoteViewController.h */,
+				DC65751E1AD441CF007199D5 /* EditNoteViewController.m */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				TargetAttributes = {
 					DC0DEA161AC96F560050EC9D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = Q52F5Q229G;
 					};
 					DC0DEA351AC96F560050EC9D = {
 						CreatedOnToolsVersion = 6.2;
@@ -403,6 +409,7 @@
 				DC65751A1AD43BE0007199D5 /* Contact.m in Sources */,
 				DC0DEA291AC96F560050EC9D /* DetailViewController.m in Sources */,
 				DC0DEA261AC96F560050EC9D /* MasterViewController.m in Sources */,
+				DC65751F1AD441CF007199D5 /* EditNoteViewController.m in Sources */,
 				DC4BE7F31ACC0C5800CB1698 /* ContactDetailViewController.m in Sources */,
 				DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */,
 				DC65751C1AD43BE0007199D5 /* Company.m in Sources */,
@@ -532,9 +539,12 @@
 			baseConfigurationReference = A1916B3FC9B2F7563F8EB064 /* Pods-Companizer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Companizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -543,9 +553,12 @@
 			baseConfigurationReference = E8B36672D2E3D29BBCBAC64B /* Pods-Companizer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Companizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

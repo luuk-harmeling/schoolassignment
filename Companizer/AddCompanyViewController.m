@@ -145,6 +145,8 @@
 
 #pragma mark - Utilities
 
+
+
 -(BOOL)checkForDuplicates:(NSString *)companyNameToCheck{
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Company"
                                               inManagedObjectContext:self.context];

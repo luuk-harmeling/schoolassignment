@@ -59,17 +59,8 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
- 
     self.fieldContents = [self getHTML];
-    NSLog(@"contents: %@", self.fieldContents);
-     NSLog(@"---------------------------------");
-    NSLog(@"Contact : %@", self.contactForNote.name);
-         NSLog(@"---------------------------------");
-    NSLog(@"Notetype: %@", self.noteType);
-         NSLog(@"---------------------------------");
-    
     [self addNote];
-    
 }
 
 

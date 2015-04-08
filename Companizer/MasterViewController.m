@@ -61,11 +61,11 @@
     CALayer *cellImageLayer = cell.imageView.layer;
     [cellImageLayer setCornerRadius:9];
     [cellImageLayer setMasksToBounds:YES];
-
     
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     // Return NO if you do not want the specified item to be editable.
     return YES;
@@ -84,15 +84,19 @@
         }
     }
 }
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
     
     
     Company *company = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSData *temp = company.logo;
-    UIImage *image = [UIImage imageWithData:temp];
+    UIImage *tempImage = [UIImage imageWithData:temp];
     
     cell.textLabel.text = [[company valueForKey:@"name"] description];
-    cell.imageView.image = image;
+    
+    UIImage *thumbnailImage= [self rescaleImage:tempImage];
+    
+    cell.imageView.image = thumbnailImage;
 
 
 }
@@ -187,6 +191,25 @@
 
 
 #pragma mark - Utility methods
+
+
+- (UIImage *)rescaleImage:(UIImage *)image
+{
+    CGSize size;
+    size.width = 42;
+    size.height = 42;
+    
+    UIGraphicsBeginImageContext(size);
+    
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSLog(@"rescaling done");
+    
+    return newImage;
+}
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];

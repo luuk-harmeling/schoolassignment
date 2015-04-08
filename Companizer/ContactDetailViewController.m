@@ -7,6 +7,7 @@
 //
 
 #import "ContactDetailViewController.h"
+#import "EditNoteViewController.h"
 #import "AddNoteViewController.h"
 #import "Note.h"
 #import "Company.h"
@@ -71,6 +72,8 @@
 }
 
 
+
+
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -82,6 +85,18 @@
          AddNoteViewController *anvc = [segue destinationViewController];
         
         anvc.contactForNote = self.selectedContact;
+    }
+    else if ([[segue identifier] isEqualToString: @"editMessageSegue"])
+    {
+        // Get reference to the destination view controller
+        EditNoteViewController *envc = [segue destinationViewController];
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //Company *companyfordetails = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        Note *selectedNote = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        
+        // pass an unique piece of the message so it can be fetched in the destinationcontroller & edited and saved.
+        envc.toBeEditedNote = selectedNote;
     }
 }
 
@@ -239,11 +254,6 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
     [self.tableView endUpdates];
 }
-
-
-
-
-
 
 #pragma mark - Utilities
 
