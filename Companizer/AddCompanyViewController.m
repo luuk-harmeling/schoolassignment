@@ -28,6 +28,10 @@
 
 @implementation AddCompanyViewController
 
+
+/*
+ Default functions
+ */
 - (void)viewDidLoad{
     [super viewDidLoad];
     
@@ -47,6 +51,13 @@
 
 #pragma mark - Button Handling
 
+/* GENERAL
+ These functions handle what has to happen when one of the following buttons in the view are clicked:
+    -clear button touch
+    -save button touch
+    -add logo button touched
+ */
+
 - (IBAction)clearButtonTouched:(id)sender{
     [self clearFields];
 }
@@ -65,9 +76,10 @@
     
 }
 
-
-- (IBAction)addLogoButtonClicked:(id)sender
-{
+/*
+ This button will handle intiate the person picking from the address book (iOS standart impemented framework (Addressbook.framework)
+ */
+- (IBAction)addLogoButtonClicked:(id)sender{
     @try
     {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -85,24 +97,15 @@
     }
 }
 
-// VERPLAATSEN ALS HET WERKT
-- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    self.logoRepresentation.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    self.companyLogo = UIImagePNGRepresentation(self.logoRepresentation.image);
 
-    if (self.companyLogo != nil)
-    {
-        NSLog(@"hij is niet leeg");
-    }
-    else
-    {
-        NSLog(@"hij is wel leeg");
-    }
-    
-}
+#pragma mark - Core data functions
 
+/*
+ this function (with minimal validation) will add a company to the core data database.
+    -Validation checks:
+        - check if all fields are filled
+        - check if the company does not already exists in core data
+ */
 - (void) addCompany{
     if([self.companyName.text length] != 0 && [self.companyAdress.text length] != 0 && [self.companyPhone.text length] != 0)
     {
@@ -145,8 +148,29 @@
 
 #pragma mark - Utilities
 
+/*
+ This function will set an image to the private image variable if its picked by the user
+ */
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    self.logoRepresentation.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    self.companyLogo = UIImagePNGRepresentation(self.logoRepresentation.image);
+    
+    if (self.companyLogo != nil)
+    {
+        NSLog(@"hij is niet leeg");
+    }
+    else
+    {
+        NSLog(@"hij is wel leeg");
+    }
+    
+}
 
-
+/*
+ Validation helper method for the addCompany function
+ */
 -(BOOL)checkForDuplicates:(NSString *)companyNameToCheck{
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Company"
                                               inManagedObjectContext:self.context];
@@ -178,16 +202,27 @@
     
 }
 
+/*
+ Helper function for the clear fields button
+ */
 - (void)clearFields{
     self.companyName.text   = @"";
     self.companyAdress.text = @"";
     self.companyPhone.text  = @"";
 
 }
+
+/*
+ Default method stub for memory warnings
+ */
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+ This will dismiss the keyboard when clicked outside a textfield
+ */
 - (void)dismissKeyBoard{
     [self.companyName resignFirstResponder];
     [self.companyAdress resignFirstResponder];

@@ -30,6 +30,9 @@
 
 #pragma mark - Managing the detail item
 
+/*
+ Configuring the passed object from the parent viewcontroller
+ */
 - (void)setDetailItem:(id)newDetailItem {
     
     if (_detailItem != newDetailItem) {
@@ -65,6 +68,9 @@
 
 #pragma mark - Contact handling
 
+/*
+ these 2 functions handle the picking a contact from the addressbook and preparing it for saving in core data
+ */
 - (IBAction)addContactButtonTouched:(id)sender{
     ABPeoplePickerNavigationController *picker =
     [[ABPeoplePickerNavigationController alloc] init];
@@ -125,11 +131,12 @@
 }
 
 
-
 #pragma mark - Segues
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+/*
+ Some preparation before segueing to the details view
+ */
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"showContactDetailsSegue"])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -143,9 +150,11 @@
 }
 
 
-
 #pragma mark - Table View
 
+/*
+ The Delegate & Datasource methods for the tableview (this tableview is for displaying the various companies
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [[self.fetchedResultsController sections] count];
 }
@@ -187,6 +196,10 @@
 
 #pragma mark - Fetched results controller
 
+/*
+ The NSFetchedResultsController handles the link between Core Data and the UITableView
+ On a change in the Core Data, this controller wil automatically change the content of the table to match the change
+ */
 - (NSFetchedResultsController *)fetchedResultsController{
     // the company for the predicate
         // the name will be used as the criteria
@@ -285,6 +298,9 @@
 
 #pragma mark - Utilities
 
+/*
+ A function that checks if the contact has not been added to the company already
+ */
 -(BOOL)checkForDuplicates:(NSString *)contactNameToCheck
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Contact"

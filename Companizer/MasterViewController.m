@@ -16,26 +16,29 @@
 
 @implementation MasterViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    
-}
+/*
+ Default functions
+ */
+- (void)awakeFromNib {
+    [super awakeFromNib];}
+- (void)viewDidLoad{
+[super viewDidLoad];}
 
 #pragma mark - IBActions
 
+/* 
+ Outlet for the addcompany button
+ */
 - (IBAction)addCompanyButtonTouched:(id)sender{}
 
 #pragma mark - Segues
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+/*
+ Segue preparation for a click on a cell
+ */
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     if ([[segue identifier] isEqualToString:@"showDetail"])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -46,6 +49,9 @@
 
 #pragma mark - Table View
 
+/*
+ The Delegate & Datasource methods for the tableview (this tableview is for displaying the various companies
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [[self.fetchedResultsController sections] count];
 }
@@ -53,8 +59,7 @@
     id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
     return [sectionInfo numberOfObjects];
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     CALayer *cellImageLayer = cell.imageView.layer;
@@ -64,7 +69,6 @@
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
-
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     // Return NO if you do not want the specified item to be editable.
     return YES;
@@ -83,7 +87,6 @@
         }
     }
 }
-
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath{
     
     
@@ -105,6 +108,11 @@
 
 #pragma mark - Fetched results controller
 
+
+/*
+ The NSFetchedResultsController handles the link between Core Data and the UITableView
+ On a change in the Core Data, this controller wil automatically change the content of the table to match the change
+ */
 - (NSFetchedResultsController *)fetchedResultsController{
     if (_fetchedResultsController != nil)
     {
@@ -134,9 +142,6 @@
     NSError *error = nil;
     if (![self.fetchedResultsController performFetch:&error])
     {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
     
@@ -192,9 +197,10 @@
 
 #pragma mark - Utility methods
 
-
-- (UIImage *)rescaleImage:(UIImage *)image
-{
+/*
+ This function (that is called in the configureCell function of the tableView function) will crop any image to a certain format
+ */
+- (UIImage *)rescaleImage:(UIImage *)image{
     CGSize size;
     size.width = 42;
     size.height = 42;
@@ -211,6 +217,9 @@
     return newImage;
 }
 
+/*
+ this auto-generated stub will fire when too much memory is being used by the application
+ */
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -24,8 +24,10 @@
 
 @implementation AddNoteViewController
 
-- (void)viewDidLoad
-{
+/*
+ Default methods
+ */
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
@@ -52,10 +54,17 @@
         
     }
 }
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 
 #pragma mark - Button Handling
 
+/*
+ This function handles the saving of the note
+ */
 - (IBAction)saveButtonPressed:(id)sender
 {
     self.fieldContents = [self getHTML];
@@ -65,7 +74,9 @@
 
 #pragma mark - Utilities
 
-
+/*
+ The function that handles the adding of the note
+ */
 - (void) addNote{
     Note *note = [NSEntityDescription insertNewObjectForEntityForName:@"Note" inManagedObjectContext:self.context];
     note.note_type = self.noteType;
@@ -94,6 +105,9 @@
     
 }
 
+/*
+ helper function that converts some data to a for core data fitting format
+ */
 - (NSString *)createContactString{
     NSString *beforeContactHTML = @"<p><strong> Contact: ";
     NSString *contactInfo = self.contactForNote.name;
@@ -105,6 +119,9 @@
     return finalizedString;
 }
 
+/*
+ an alert view.
+ */
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 
     NSString *string = [alertView buttonTitleAtIndex:buttonIndex];
@@ -128,10 +145,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

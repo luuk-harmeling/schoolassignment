@@ -21,6 +21,9 @@
 
 @implementation EditNoteViewController
 
+/*
+ Default functions
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -60,6 +63,9 @@
 
 #pragma mark - Utilities
 
+/*
+ This function handles the input from the alertview (alertview from the viewDidLoad)
+ */
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     NSString *string = [alertView buttonTitleAtIndex:buttonIndex];
@@ -88,13 +94,16 @@
     
 }
 
+/*
+ This function does the actual updating of the note to core data
+ */
 - (void)updateCurrentRecord:(NSString *)contents :(NSString *)noteType
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Note" inManagedObjectContext:self.context];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
 
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"content == %@", self.toBeEditedNote.content];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date == %@", self.toBeEditedNote.date];
     request.predicate = predicate;
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];

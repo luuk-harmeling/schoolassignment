@@ -31,9 +31,22 @@
 @implementation ContactDetailViewController
 
 
-// Managing the selected object
-- (void)setContactForDetailPage:(Contact *)newDetailItem
-{
+/*
+ Default functions
+ */
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
+    
+    [self updateUI];
+}
+
+/*
+ This function will put the contact (given from the parent segue)
+ */
+- (void)setContactForDetailPage:(Contact *)newDetailItem{
     
     if (_selectedContact != newDetailItem)
     {
@@ -42,16 +55,20 @@
     }
 }
 
-- (void)configureView
-{
+/*
+ helper method for the setContactForDetailPage
+ */
+- (void)configureView{
     if (self.selectedContact)
     {
         [self updateUI];
     }
 }
 
-- (void)updateUI
-{
+/*
+ This function will update the details for the contact (if instantiated)
+ */
+- (void)updateUI{
     self.contactNameLabel.text = self.selectedContact.name;
     self.contactNumberLabel.text = self.selectedContact.phoneNumber;
     self.contactCompanyLabel.text = self.selectedContact.company.name;
@@ -61,19 +78,13 @@
 }
 
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
-    
-    [self updateUI];
-}
-
-
 #pragma mark - Segues
 
+/*
+ The handling of multiple segues here
+    - AddNoteSegue will prepare for adding a note
+    - EditMessageSegue will prepare for editing a note
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Make sure your segue name in storyboard is the same as this line
@@ -101,6 +112,10 @@
 
 #pragma mark - Table View
 
+
+/*
+ The Delegate & Datasource methods for the tableview (this tableview is for displaying the various companies
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [[self.fetchedResultsController sections] count];
 }
@@ -148,13 +163,13 @@
 
 #pragma mark - Fetched results controller
 
+
+/*
+ The NSFetchedResultsController handles the link between Core Data and the UITableView
+ On a change in the Core Data, this controller wil automatically change the content of the table to match the change
+ */
 - (NSFetchedResultsController *)fetchedResultsController{
-//    // the company for the predicate
-//    // the name will be used as the criteria
-//    NSString *companyName = self.detailItem.name;
-    
-    
-    
+
     if (_fetchedResultsController != nil)
     {
         return _fetchedResultsController;
@@ -165,7 +180,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Note" inManagedObjectContext:self.context];
     [fetchRequest setEntity:entity];
     
-//    //Predicate so that only the contacts for the selected company are shown
+    //Predicate so that only the contacts for the selected company are shown
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"contact.name == %@", self.contactNameLabel.text];
     fetchRequest.predicate = predicate;
     
@@ -245,6 +260,9 @@
 
 #pragma mark - Utilities
 
+/*
+ this auto-generated stub will fire when too much memory is being used by the application
+ */
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
