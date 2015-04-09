@@ -28,7 +28,6 @@
 {
     [super viewDidLoad];
     
-    // get the context from the AppDelegate
     self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
     
     self.navigationController.navigationBar.translucent = NO;
@@ -67,8 +66,7 @@
 #pragma mark - Utilities
 
 
-- (void) addNote
-{
+- (void) addNote{
     Note *note = [NSEntityDescription insertNewObjectForEntityForName:@"Note" inManagedObjectContext:self.context];
     note.note_type = self.noteType;
     note.content = self.fieldContents;

@@ -182,6 +182,7 @@
     self.companyName.text   = @"";
     self.companyAdress.text = @"";
     self.companyPhone.text  = @"";
+
 }
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];

@@ -22,31 +22,6 @@
             </objects>
             <point key="canvasLocation" x="-2008.5" y="-74.25"/>
         </scene>
-        <!--Quick add note-->
-        <scene sceneID="JhA-Bg-77j">
-            <objects>
-                <viewController id="CoH-Ei-gbM" customClass="QuickAddNoteViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lpb-I5-WvR"/>
-                        <viewControllerLayoutGuide type="bottom" id="7YF-Dd-ryI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WCi-fX-OQ3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Quick add note" id="h48-K7-99E">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="7lx-f8-0yM">
-                            <connections>
-                                <action selector="saveButtonPressed:" destination="CoH-Ei-gbM" id="SgQ-iU-ebh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8a1-uB-ZFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1147.5" y="-768"/>
-        </scene>
         <!--Add company-->
         <scene sceneID="btS-Fs-NSB">
             <objects>
@@ -292,6 +267,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wzN-Jz-tsE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6d1-ac-dPG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -315,10 +291,10 @@
         <scene sceneID="VgW-fR-Quf">
             <objects>
                 <tableViewController title="Master" id="pGg-6v-bdr" customClass="MasterViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mLL-gJ-YKr">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mLL-gJ-YKr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
@@ -351,11 +327,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Summary" id="tQt-TN-PWz">
-                        <barButtonItem key="leftBarButtonItem" title="Quick note" id="2o7-fC-GSp">
-                            <connections>
-                                <segue destination="CoH-Ei-gbM" kind="show" id="j1L-e9-G9p"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add company" id="yLl-GJ-zbx">
                             <connections>
                                 <action selector="addCompanyButtonTouched:" destination="pGg-6v-bdr" id="zfn-Da-93a"/>

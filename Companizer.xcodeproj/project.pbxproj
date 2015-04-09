@@ -29,7 +29,6 @@
 		DC65751F1AD441CF007199D5 /* EditNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC65751E1AD441CF007199D5 /* EditNoteViewController.m */; };
 		DC7D12A51AD42EB40001779B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7D12A41AD42EB40001779B /* QuartzCore.framework */; };
 		DC91FD491ACC3E1700FD94AA /* AddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */; };
-		DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +78,6 @@
 		DC7D12A41AD42EB40001779B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DC91FD471ACC3E1700FD94AA /* AddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteViewController.h; sourceTree = "<group>"; };
 		DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteViewController.m; sourceTree = "<group>"; };
-		DC91FD4A1ACC3FEA00FD94AA /* QuickAddNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickAddNoteViewController.h; sourceTree = "<group>"; };
-		DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickAddNoteViewController.m; sourceTree = "<group>"; };
 		E8B36672D2E3D29BBCBAC64B /* Pods-Companizer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Companizer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Companizer/Pods-Companizer.release.xcconfig"; sourceTree = "<group>"; };
 		F8E64785DA25BAC2947D3F84 /* libPods-Companizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Companizer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -260,8 +257,6 @@
 			children = (
 				DC91FD471ACC3E1700FD94AA /* AddNoteViewController.h */,
 				DC91FD481ACC3E1700FD94AA /* AddNoteViewController.m */,
-				DC91FD4A1ACC3FEA00FD94AA /* QuickAddNoteViewController.h */,
-				DC91FD4B1ACC3FEA00FD94AA /* QuickAddNoteViewController.m */,
 				DC65751D1AD441CF007199D5 /* EditNoteViewController.h */,
 				DC65751E1AD441CF007199D5 /* EditNoteViewController.m */,
 			);
@@ -411,7 +406,6 @@
 				DC0DEA261AC96F560050EC9D /* MasterViewController.m in Sources */,
 				DC65751F1AD441CF007199D5 /* EditNoteViewController.m in Sources */,
 				DC4BE7F31ACC0C5800CB1698 /* ContactDetailViewController.m in Sources */,
-				DC91FD4C1ACC3FEA00FD94AA /* QuickAddNoteViewController.m in Sources */,
 				DC65751C1AD43BE0007199D5 /* Company.m in Sources */,
 				DC0DEA201AC96F560050EC9D /* AppDelegate.m in Sources */,
 				DC0DEA1D1AC96F560050EC9D /* main.m in Sources */,

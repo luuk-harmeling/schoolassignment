@@ -54,16 +54,9 @@
 {
     self.editedContent = [self getHTML];
     
-    NSLog(self.editedContent);
     
     [self updateCurrentRecord:self.editedContent :self.editedNoteType];
 }
-
-//TODO
-    // fetch the note from core data
-    // show it in the textbox
-    // make the user edit it
-    // prompt the message type
 
 #pragma mark - Utilities
 

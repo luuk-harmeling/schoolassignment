@@ -26,7 +26,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     
-    
 }
 
 #pragma mark - IBActions
@@ -93,6 +92,7 @@
     UIImage *tempImage = [UIImage imageWithData:temp];
     
     cell.textLabel.text = [[company valueForKey:@"name"] description];
+
     
     UIImage *thumbnailImage= [self rescaleImage:tempImage];
     
