@@ -31,7 +31,7 @@
 {
     [super viewDidAppear:animated];
     id tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"AddNoteViewController"];
+    [tracker set:kGAIScreenName value:@"EditNoteViewController"];
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
