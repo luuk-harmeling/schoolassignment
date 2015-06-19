@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Companizer-GoogleAnalytics.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Companizer-ZSSRichTextEditor.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B3AF5D15210F2DF3F6CEC9B</key>
+		<key>06940C8C4A0985E392143EC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2FCB90CE3FC95CFA01B29CD</key>
+		<key>44BBEBCA0B4C683294BCB761</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B0930CD108FECC887C4540A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

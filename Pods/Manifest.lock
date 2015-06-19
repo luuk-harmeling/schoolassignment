@@ -1,10 +1,13 @@
 PODS:
+  - GoogleAnalytics (3.12.0)
   - ZSSRichTextEditor (0.5.2.1)
 
 DEPENDENCIES:
+  - GoogleAnalytics (~> 3.12)
   - ZSSRichTextEditor (~> 0.5)
 
 SPEC CHECKSUMS:
+  GoogleAnalytics: ef2e0b800ef3c1e62688cdfc959e0d3132bc246c
   ZSSRichTextEditor: 56ed060d6d7a98fb6be9fceb8074ced22160349b
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.36.4

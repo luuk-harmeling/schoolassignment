@@ -9,6 +9,9 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <GAI.h>
+#import <GAIFields.h>
+#import <GAIDictionaryBuilder.h>
 
 @interface MasterViewController ()
 
@@ -20,10 +23,22 @@
 /*
  Default functions
  */
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"AddNoteViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];}
-- (void)viewDidLoad{
-[super viewDidLoad];}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+
+}
 
 #pragma mark - IBActions
 

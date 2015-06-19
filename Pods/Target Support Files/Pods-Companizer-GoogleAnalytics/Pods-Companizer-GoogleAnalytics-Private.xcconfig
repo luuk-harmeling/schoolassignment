@@ -1,0 +1,7 @@
+#include "Pods-Companizer-GoogleAnalytics.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/GoogleAnalytics" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAnalytics" "${PODS_ROOT}/Headers/Public/ZSSRichTextEditor"
+LIBRARY_SEARCH_PATHS = ${PODS_COMPANIZER_GOOGLEANALYTICS_LIBRARY_SEARCH_PATHS}
+OTHER_LDFLAGS = ${PODS_COMPANIZER_GOOGLEANALYTICS_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

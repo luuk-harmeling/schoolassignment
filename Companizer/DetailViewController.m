@@ -11,6 +11,9 @@
 #import "Contact.h"
 #import "AppDelegate.h"
 #import "ContactDetailViewController.h"
+#import <GAI.h>
+#import <GAIFields.h>
+#import <GAIDictionaryBuilder.h>
 
 
 @interface DetailViewController ()
@@ -58,6 +61,15 @@
         self.phoneNumberField.dataDetectorTypes = UIDataDetectorTypeAll;
     }
 }
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"AddNoteViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     

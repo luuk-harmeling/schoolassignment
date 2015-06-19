@@ -9,6 +9,9 @@
 #import "AddCompanyViewController.h"
 #import "AppDelegate.h"
 #import "Company.h"
+#import <GAI.h>
+#import <GAIFields.h>
+#import <GAIDictionaryBuilder.h>
 
 @interface AddCompanyViewController ()
 
@@ -32,8 +35,17 @@
 /*
  Default functions
  */
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"AddNoteViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
     
     // get the context from the AppDelegate
     self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];

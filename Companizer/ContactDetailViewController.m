@@ -12,6 +12,9 @@
 #import "Note.h"
 #import "Company.h"
 #import "AppDelegate.h"
+#import <GAI.h>
+#import <GAIFields.h>
+#import <GAIDictionaryBuilder.h>
 
 @interface ContactDetailViewController ()
 
@@ -34,9 +37,18 @@
 /*
  Default functions
  */
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"AddNoteViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+ 
     
     self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
     

@@ -4,6 +4,7 @@
 target 'Companizer' do
 
 pod 'ZSSRichTextEditor', '~> 0.5'
+pod 'GoogleAnalytics', '~> 3.12'
 
 end
 

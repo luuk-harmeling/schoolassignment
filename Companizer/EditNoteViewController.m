@@ -9,6 +9,9 @@
 #import "EditNoteViewController.h"
 #import "Note.h"
 #import "AppDelegate.h"
+#import <GAI.h>
+#import <GAIFields.h>
+#import <GAIDictionaryBuilder.h>
 
 @interface EditNoteViewController ()
 
@@ -24,9 +27,17 @@
 /*
  Default functions
  */
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"AddNoteViewController"];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+  
     self.context = [[[UIApplication sharedApplication] delegate] performSelector:@selector(getManagedContext)];
     
     [self setHTML:self.toBeEditedNote.content];
